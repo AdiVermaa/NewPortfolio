@@ -30,7 +30,7 @@ const Hero = () => {
       <div className="hero-content">
         <div className="profile-pic-container">
           <img 
-            src="./assets/photo.JPG" 
+            src="./src/assets/photo.jpeg" 
             alt="Aditya Verma" 
             className="profile-pic"
           />

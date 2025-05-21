@@ -34,12 +34,11 @@ const About = () => {
   }, []);
 
   const skills = [
-    { name: 'JavaScript', level: 90 },
-    { name: 'React', level: 85 },
-    { name: 'HTML/CSS', level: 95 },
-    { name: 'Node.js', level: 55 },
-    { name: 'Python', level: 80 },
-    // { name: 'AI/ML', level: 70 }
+    { name: 'JavaScript' },
+    { name: 'React' },
+    { name: 'HTML/CSS' },
+    { name: 'Node.js' },
+    { name: 'Python' },
   ];
 
   const services = [
@@ -108,20 +107,10 @@ const About = () => {
           
           <div className="skills-container reveal">
             <h3 className="about-subtitle">My Skills</h3>
-            <div className="skills-list">
+            <div className="skills-grid">
               {skills.map((skill, index) => (
-                <div className="skill-item" key={index}>
-                  <div className="skill-info">
-                    <span className="skill-name">{skill.name}</span>
-                    <span className="skill-percentage">{skill.level}%</span>
-                  </div>
-                  <div className="skill-bar">
-                    <div 
-                      className="skill-progress" 
-                      style={{ width: `${skill.level}%` }}
-                      data-level={skill.level}
-                    ></div>
-                  </div>
+                <div className="skill-tag" key={index}>
+                  {skill.name}
                 </div>
               ))}
             </div>

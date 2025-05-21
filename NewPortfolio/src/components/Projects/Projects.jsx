@@ -40,17 +40,17 @@ const Projects = () => {
       id: 1,
       title: "AI-Powered Text-To-Speach",
       description: "A web application that uses AI to read and convert it into natural speech using speech synthesis .",
-      image: "/project-placeholder-1.jpg",
+      image: "./src/assets/text-to-speech.png",
       category: ["ai", "frontend"],
       githubUrl: "https://github.com/AdiVermaa/text-to-speech",
       liveUrl: "https://adivermaa.github.io/text-to-speech/",
       technologies: ["HTML","CSS","JavaScript"]
     },
     {
-      id: 2,
+      id: 2, 
       title: "Movie Search App",
       description: "The Movie Search App enables users to search for movies, browse by genre, manage a watchlist, and receive personalised recommendations based on their choices.",
-      image: "/project-placeholder-2.jpg",
+      image: "./src/assets/movie.png",
       category: ["frontend"],
       githubUrl: "https://github.com/AdiVermaa/Movie-Search",
       liveUrl: "https://movie-search-lac-ten.vercel.app/",
@@ -60,7 +60,7 @@ const Projects = () => {
       id: 3,
       title: "Fitness App",
       description: "Inspired by the popular manhwa/novel 'Solo Leveling', this application helps you track your real-life 'leveling up' through daily quests and challenges.",
-      image: "/project-placeholder-3.jpg",
+      image: "./src/assets/Fitness.png",
       category: ["frontend"],
       githubUrl: "https://github.com/AdiVermaa/Fitness-App",
       liveUrl: "https://capstone-2-coral.vercel.app/",
@@ -70,7 +70,7 @@ const Projects = () => {
       id: 4,
       title: "Personal Finance Tracker",
       description: "A financial management application that helps users track expenses, and visualize spending patterns.",
-      image: "/project-placeholder-4.jpg",
+      image: "./src/assets/Finance.png",
       category: ["frontend"],
       githubUrl: "https://github.com/AdiVermaa/Budget-Tracker",
       liveUrl: "https://adivermaa.github.io/Budget-Tracker/",
@@ -80,7 +80,7 @@ const Projects = () => {
       id: 5,
       title: "Rock Paper Scissors",
       description: "A modern take on the classic game with animated interactions and score tracking.",
-      image: "/project-placeholder-5.jpg",
+      image: "./src/assets/stone paper scissor game.png",
       category: ["frontend"],
       githubUrl: "https://github.com/AdiVermaa/project1",
       liveUrl: "https://adivermaa.github.io/project1/",
@@ -88,13 +88,13 @@ const Projects = () => {
     },
     {
       id: 6,
-      title: "Real-time Collaboration Platform",
-      description: "A collaborative workspace where teams can communicate, share files, and work together in real-time.",
-      image: "/project-placeholder-6.jpg",
+      title: "Personal Portfolio",
+      description: "The website serves as a digital space to showcase my skills, achievements, and projects",
+      image: "./src/assets/portfolio.png",
       category: ["fullstack"],
-      githubUrl: "https://github.com/AdiVermaa/collab-platform",
+      githubUrl: "https://github.com/AdiVermaa/NewPortfolio",
       liveUrl: "https://collab.verma.dev",
-      technologies: ["React", "Socket.io", "Express", "MongoDB", "WebRTC"]
+      technologies: ["React","HTML","CSS","JS"]
     }
   ];
 
@@ -106,39 +106,6 @@ const Projects = () => {
     <section id="projects" className="section projects-section">
       <div className="container">
         <h2 className="section-title reveal">My Projects</h2>
-        
-        <div className="filter-container reveal">
-          <button 
-            className={`filter-btn ${filter === 'all' ? 'active' : ''}`}
-            onClick={() => setFilter('all')}
-          >
-            All
-          </button>
-          <button 
-            className={`filter-btn ${filter === 'frontend' ? 'active' : ''}`}
-            onClick={() => setFilter('frontend')}
-          >
-            Frontend
-          </button>
-          <button 
-            className={`filter-btn ${filter === 'fullstack' ? 'active' : ''}`}
-            onClick={() => setFilter('fullstack')}
-          >
-            Full Stack
-          </button>
-          <button 
-            className={`filter-btn ${filter === 'ai' ? 'active' : ''}`}
-            onClick={() => setFilter('ai')}
-          >
-            AI / ML
-          </button>
-          <button 
-            className={`filter-btn ${filter === 'iot' ? 'active' : ''}`}
-            onClick={() => setFilter('iot')}
-          >
-            IoT
-          </button>
-        </div>
         
         <div className="projects-grid" ref={projectsRef}>
           {filteredProjects.map((project, index) => (

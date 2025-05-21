@@ -168,7 +168,7 @@ const Contact = () => {
           <div className="contact-form-container reveal">
             <h3 className="contact-subtitle">Send Me a Message</h3>
             
-            {/* action="https://getform.io/f/apjngwja" method="POST" */}
+            
             <form onSubmit={handleSubmit} className='contact-form'>
               <div className="form-group">
                 <input

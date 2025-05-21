@@ -1,5 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { 
   faGithub, 
   faLinkedin, 
@@ -54,23 +55,6 @@ const Footer = () => {
               </div>
             </div>
             
-            <div className="footer-subscribe">
-              <h4 className="footer-heading">Stay Updated</h4>
-              <p className="footer-description">
-                Subscribe to my newsletter for the latest updates, articles, and resources.
-              </p>
-              <form className="subscribe-form">
-                <input 
-                  type="email" 
-                  className="subscribe-input" 
-                  placeholder="Your email address" 
-                  required 
-                />
-                <button type="submit" className="subscribe-btn">
-                  Subscribe
-                </button>
-              </form>
-            </div>
           </div>
         </div>
       </div>
@@ -102,16 +86,7 @@ const Footer = () => {
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
               <a
-                href="https://twitter.com"
-                className="social-icon"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Twitter Profile"
-              >
-                <FontAwesomeIcon icon={faTwitter} />
-              </a>
-              <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/adi_vermaa_56/"
                 className="social-icon"
                 target="_blank"
                 rel="noopener noreferrer"
