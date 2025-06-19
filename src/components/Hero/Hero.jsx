@@ -47,7 +47,7 @@ const Hero = () => {
         </div>
 
         <div className="cta-container">
-          <a href="/resume.pdf" className="btn primary-btn" download>
+          <a href="./src/assets/Resume-Aditya Verma.pdf" className="btn primary-btn" download>
             <FontAwesomeIcon icon={faDownload} /> Resume
           </a>
           <a href="#contact" className="btn secondary-btn">
