@@ -30,7 +30,7 @@ const Hero = () => {
       <div className="hero-content">
         <div className="profile-pic-container">
           <img 
-            src="./src/assets/photo.jpeg" 
+            src="/photo.jpeg" 
             alt="Aditya Verma" 
             className="profile-pic"
           />
@@ -47,7 +47,7 @@ const Hero = () => {
         </div>
 
         <div className="cta-container">
-          <a href="./src/assets/Resume-Aditya Verma.pdf" className="btn primary-btn" download>
+          <a href="/Resume-Aditya Verma.pdf" className="btn primary-btn" download>
             <FontAwesomeIcon icon={faDownload} /> Resume
           </a>
           <a href="#contact" className="btn secondary-btn">
