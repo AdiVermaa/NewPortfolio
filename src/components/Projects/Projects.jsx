@@ -234,17 +234,6 @@ const Projects = () => {
             })}
           </div>
 
-          <div className="card-navigation">
-            {projects.map((_, index) => (
-              <button
-                key={index}
-                className={`nav-dot ${index === currentIndex ? 'active' : ''}`}
-                onClick={() => setCurrentIndex(index)}
-                aria-label={`Go to project ${index + 1}`}
-              />
-            ))}
-          </div>
-
           <button 
             className="nav-arrow prev-arrow" 
             onClick={handlePrev}
@@ -259,6 +248,17 @@ const Projects = () => {
           >
             ›
           </button>
+        </div>
+
+        <div className="card-navigation">
+          {projects.map((_, index) => (
+            <button
+              key={index}
+              className={`nav-dot ${index === currentIndex ? 'active' : ''}`}
+              onClick={() => setCurrentIndex(index)}
+              aria-label={`Go to project ${index + 1}`}
+            />
+          ))}
         </div>
       </div>
     </section>
