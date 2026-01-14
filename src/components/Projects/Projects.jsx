@@ -1,210 +1,264 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faChrome } from '@fortawesome/free-brands-svg-icons';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import './Projects.css';
 
 const Projects = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const sectionRef = useRef(null);
+
   const projects = [
     {
       id: 1,
+      title: "Campus Connect",
+      description: "A secure, university-only Reddit-style platform with admin moderation and activity tracking, built using the MERN stack.",
+      image: "/Campus-Connect.png",
+      githubUrl: "https://github.com/AdiVermaa/CampusConnect.git",
+      liveUrl: "https://campus-connect-six-liard.vercel.app/",
+      technologies: ["Node.JS","React","MONGO","Tailwind"],
+      year: "2025",
+      results: [
+        "Secure, university-only Reddit-style platform",
+        "Admin moderation and activity tracking",
+        "Full proof messaging using websocket.io"
+      ]
+    },
+    {
+      id: 2,
       title: "Solar System Explorer",
       description: "A 3D interactive Solar System simulation built with Three.js, showcasing realistic planetary orbits and scaling.",
       image: "/Solar-sytem.png",
-      category: ["frontend"],
       githubUrl: "https://github.com/AdiVermaa/SolarSystem",
       liveUrl: "https://adivermaa.github.io/SolarSystem/",
       technologies: ["HTML","CSS","JavaScript","Three.JS"],
       year: "2025",
       results: [
-        { title: "Interactive 3D visualization of the solar system" },
-        { title: "Realistic planetary orbits and scaling" },
-        { title: "Smooth camera controls and animations" }
+        "Interactive 3D visualization of the solar system",
+        "Realistic planetary orbits and scaling",
+        "Smooth camera controls and animations"
       ]
     },
     {
-      id: 2, 
+      id: 3, 
       title: "Movie Search App",
-      description: "The Movie Search App enables users to search for movies, browse by genre, manage a watchlist, and receive personalised recommendations based on their choices.",
+      description: "The Movie Search App enables users to search for movies, browse by genre, manage a watchlist, and receive personalised recommendations.",
       image: "/movie.png",
-      category: ["frontend"],
       githubUrl: "https://github.com/AdiVermaa/Movie-Search",
       liveUrl: "https://movie-search-lac-ten.vercel.app/",
       technologies: ["React", "HTML","CSS","JS"],
       year: "2024",
       results: [
-        { title: "Movie search and filtering functionality" },
-        { title: "Personalized watchlist management" },
-        { title: "Genre-based browsing and recommendations" }
+        "Movie search and filtering functionality",
+        "Personalized watchlist management",
+        "Genre-based browsing and recommendations"
       ]
     },
     {
-      id: 3,
+      id: 4,
       title: "Fitness App",
-      description: "Inspired by the popular manhwa/novel 'Solo Leveling', this application helps you track your real-life 'leveling up' through daily quests and challenges.",
+      description: "Inspired by 'Solo Leveling', this application helps you track your real-life 'leveling up' through daily quests and challenges.",
       image: "/Fitness.png",
-      category: ["frontend"],
       githubUrl: "https://github.com/AdiVermaa/Fitness-App",
       liveUrl: "https://capstone-2-coral.vercel.app/",
       technologies: ["React","HTML","CSS","JS"],
       year: "2024",
       results: [
-        { title: "Daily quest and challenge tracking" },
-        { title: "Progress visualization and statistics" },
-        { title: "Gamified fitness experience" }
+        "Daily quest and challenge tracking",
+        "Progress visualization and statistics",
+        "Gamified fitness experience"
       ]
     },
     {
-      id: 4,
+      id: 5,
       title: "Personal Portfolio",
       description: "The website serves as a digital space to showcase my skills, achievements, and projects",
       image: "/portfolio.png",
-      category: ["fullstack"],
       githubUrl: "https://github.com/AdiVermaa/NewPortfolio",
       liveUrl: "https://collab.verma.dev",
       technologies: ["React","HTML","CSS","JS"],
       year: "2024",
       results: [
-        { title: "Modern and responsive design" },
-        { title: "Interactive project showcase" },
-        { title: "Smooth animations and transitions" }
+        "Modern and responsive design",
+        "Interactive project showcase",
+        "Smooth animations and transitions"
       ]
     },
     {
-      id: 5,
-      title: "AI-Powered Text-To-Speach",
+      id: 6,
+      title: "AI-Powered Text-To-Speech",
       description: "A web application that uses AI to read and convert it into natural speech using speech synthesis.",
       image: "/text-to-speech.png",
-      category: ["ai", "frontend"],
       githubUrl: "https://github.com/AdiVermaa/text-to-speech",
       liveUrl: "https://adivermaa.github.io/text-to-speech/",
       technologies: ["HTML","CSS","JavaScript"],
       year: "2024",
       results: [
-        { title: "AI-powered text-to-speech conversion" },
-        { title: "Natural voice synthesis" },
-        { title: "Customizable voice settings" }
+        "AI-powered text-to-speech conversion",
+        "Natural voice synthesis",
+        "Customizable voice settings"
       ]
     },
     {
-      id: 6,
+      id: 7,
       title: "Personal Finance Tracker",
-      description: "A financial management application that helps users track expenses, and visualize spending patterns.",
+      description: "A financial management application that helps users track expenses and visualize spending patterns.",
       image: "./Finance.png",
-      category: ["frontend"],
       githubUrl: "https://github.com/AdiVermaa/Budget-Tracker",
       liveUrl: "https://adivermaa.github.io/Budget-Tracker/",
       technologies: ["HTML","CSS","JS"],
       year: "2024",
       results: [
-        { title: "Expense tracking and categorization" },
-        { title: "Spending pattern visualization" },
-        { title: "Budget planning and management" }
+        "Expense tracking and categorization",
+        "Spending pattern visualization",
+        "Budget planning and management"
       ]
     },
     {
-      id: 7,
+      id: 8,
       title: "Rock Paper Scissors",
       description: "A modern take on the classic game with animated interactions and score tracking.",
       image: "./stone paper scissor game.png",
-      category: ["frontend"],
       githubUrl: "https://github.com/AdiVermaa/project1",
       liveUrl: "https://adivermaa.github.io/project1/",
       technologies: ["HTML","CSS","JS"],
       year: "2024",
       results: [
-        { title: "Animated game interactions" },
-        { title: "Score tracking and statistics" },
-        { title: "Responsive design for all devices" }
+        "Animated game interactions",
+        "Score tracking and statistics",
+        "Responsive design for all devices"
       ]
     }
   ];
 
+  const handleNext = () => {
+    setCurrentIndex(prev => (prev + 1) % projects.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex(prev => (prev - 1 + projects.length) % projects.length);
+  };
+
   return (
-    <section id="projects" className="projects-section">
+    <section id="projects" className="projects-section" ref={sectionRef}>
       <div className="container">
-        {/* Header Section */}
         <div className="projects-header">
           <p className="projects-subtitle">Real-world Results</p>
           <h2 className="projects-title">Featured Projects</h2>
           <p className="projects-description">
-            See how I transform concept into engaging digital experiences.
+            See how I transform concepts into engaging digital experiences.
           </p>
         </div>
 
-        {/* Projects Grid */}
-        <div className="projects-grid">
-          {projects.map((project, index) => (
-            <div
-              key={project.id}
-              className="project-card"
-              style={{
-                top: `calc(64px + ${index * 40}px)`
-              }}
-            >
-              <div className="project-content-wrapper">
-                {/* Left Column - Project Info */}
-                <div className="project-info">
-                  {/* Project Title and Year */}
-                  <div className="project-header">
-                    <h3 className="project-title">{project.title}</h3>
-                    <span className="project-year">{project.year}</span>
-                  </div>
+        <div className="card-deck-container">
+          <div className="card-deck">
+            {projects.map((project, index) => {
+              // Determine card position relative to current index
+              let position = 'hidden';
+              
+              if (index === currentIndex) {
+                position = 'active';
+              } else if (index === (currentIndex - 1 + projects.length) % projects.length) {
+                position = 'prev';
+              } else if (index === (currentIndex + 1) % projects.length) {
+                position = 'next';
+              }
 
-                  {/* Tech Stack */}
-                  <div className="project-tech">
-                    {project.technologies.map((tech, i) => (
-                      <span className="tech-tag" key={i}>{tech}</span>
-                    ))}
-                  </div>
+              return (
+                <div
+                  key={project.id}
+                  className={`project-card-deck ${position}`}
+                  style={{
+                    zIndex: position === 'active' ? 3 : position === 'hidden' ? 0 : 1
+                  }}
+                >
+                  <div className="project-content-wrapper">
+                    <div className="project-info">
+                      <div className="project-header">
+                        <h3 className="project-title">{project.title}</h3>
+                        <span className="project-year">{project.year}</span>
+                      </div>
 
-                  {/* Divider */}
-                  <hr className="project-divider" />
+                      <div className="project-tech">
+                        {project.technologies.map((tech, i) => (
+                          <span className="tech-tag" key={i}>{tech}</span>
+                        ))}
+                      </div>
 
-                  {/* Project Results/Features */}
-                  <ul className="project-results">
-                    {project.results.map((result, i) => (
-                      <li key={i} className="result-item">
-                        <span className="check-icon">✓</span>
-                        <span>{result.title}</span>
-                      </li>
-                    ))}
-                  </ul>
+                      <hr className="project-divider" />
 
-                  {/* Project Links */}
-                  <div className="project-links">
-                    <a 
-                      href={project.githubUrl} 
-                      className="project-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FontAwesomeIcon icon={faGithub} />
-                      <span>View Code</span>
-                    </a>
-                    <a 
-                      href={project.liveUrl} 
-                      className="project-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FontAwesomeIcon icon={faChrome} />
-                      <span>Live Demo</span>
-                    </a>
+                      <ul className="project-results">
+                        {project.results.map((result, i) => (
+                          <li key={i} className="result-item">
+                            <span className="check-icon">✓</span>
+                            <span>{result}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      <div className="project-links">
+                        <a 
+                          href={project.githubUrl} 
+                          className="project-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FontAwesomeIcon icon={faGithub} />
+                          <span>View Code</span>
+                          <FontAwesomeIcon icon={faArrowRight} className="arrow-icon" />
+                        </a>
+                        <a 
+                          href={project.liveUrl} 
+                          className="project-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FontAwesomeIcon icon={faChrome} />
+                          <span>Live Demo</span>
+                          <FontAwesomeIcon icon={faArrowRight} className="arrow-icon" />
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="project-image-container">
+                      <div className="image-overlay"></div>
+                      <img 
+                        src={project.image} 
+                        alt={project.title}
+                        className="project-image"
+                      />
+                    </div>
                   </div>
                 </div>
+              );
+            })}
+          </div>
 
-                {/* Right Column - Project Image */}
-                <div className="project-image-container">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="project-image"
-                  />
-                </div>
-              </div>
-            </div>
-          ))}
+          <div className="card-navigation">
+            {projects.map((_, index) => (
+              <button
+                key={index}
+                className={`nav-dot ${index === currentIndex ? 'active' : ''}`}
+                onClick={() => setCurrentIndex(index)}
+                aria-label={`Go to project ${index + 1}`}
+              />
+            ))}
+          </div>
+
+          <button 
+            className="nav-arrow prev-arrow" 
+            onClick={handlePrev}
+            aria-label="Previous project"
+          >
+            ‹
+          </button>
+          <button 
+            className="nav-arrow next-arrow" 
+            onClick={handleNext}
+            aria-label="Next project"
+          >
+            ›
+          </button>
         </div>
       </div>
     </section>

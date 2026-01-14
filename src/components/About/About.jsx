@@ -39,30 +39,15 @@ const About = () => {
     { name: 'HTML/CSS' },
     { name: 'Node.js' },
     { name: 'Python' },
+    { name: 'MongoDB' },
+    { name: 'Tailwind CSS' },
+    { name: 'ExpressJS' },
+    { name: 'MYSQL' },
+    { name: 'Prisma ORM' },
+    { name: 'Pandas' }
   ];
 
-  const services = [
-    {
-      icon: faCode,
-      title: 'Frontend Development',
-      description: 'Building responsive and interactive user interfaces with modern frameworks and best practices.'
-    },
-    {
-      icon: faServer,
-      title: 'Backend Development',
-      description: 'Creating robust APIs and server-side applications to power your digital solutions.'
-    },
-    {
-      icon: faMobileAlt,
-      title: 'Responsive Design',
-      description: 'Ensuring your applications look and perform flawlessly across all devices and screen sizes.'
-    },
-    {
-      icon: faRobot,
-      title: 'AI Integration',
-      description: 'Implementing machine learning and AI solutions to enhance your applications with intelligent features.'
-    }
-  ];
+
 
   return (
     <section id="about" className="section about-section" ref={aboutRef}>
@@ -73,8 +58,8 @@ const About = () => {
           <div className="about-info reveal">
             <h3 className="about-subtitle">Who I Am</h3>
             <p className="about-text">
-              Hi there! I'm Aditya Verma, a passionate frontend developer and AI enthusiast based in Navi Mumbai, India. 
-              With 1 year of experience in web development, I specialize in creating engaging, 
+              Hi there! I'm Aditya Verma, a passionate Fullstack developer and AI enthusiast based in Navi Mumbai, India. 
+              With 2 years of experience in Fullstack development, I specialize in creating engaging, 
               user-friendly digital experiences that combine aesthetic appeal with technical excellence.
             </p>
         
@@ -100,7 +85,7 @@ const About = () => {
               </div>
               <div className="detail-item">
                 <span className="detail-label">Experience:</span>
-                <span className="detail-value">1 Year</span>
+                <span className="detail-value">2 Years</span>
               </div>
             </div>
           </div>
