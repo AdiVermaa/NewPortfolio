@@ -11,6 +11,21 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: "Finance Dashboard",
+      description: "A full-stack MERN application for finance dashboard management with JWT authentication, role-based access control, analytics APIs, and a clean React frontend.",
+      image: "/Finance_Dashboard.png",
+      githubUrl: "https://github.com/AdiVermaa/Finance-Dashboard.git",
+      liveUrl: "https://finance-dashboard-taupe-two.vercel.app/login",
+      technologies: ["Node.JS","React","MONGO","Express.js","Vanilla CSS"],
+      year: "2026",
+      results: [
+        "Secure JWT authentication",
+        "Analytics APIs",
+        "Role-based access control"
+      ]
+    },
+    {
+      id: 2,
       title: "Campus Connect",
       description: "A secure, university-only Reddit-style platform with admin moderation and activity tracking, built using the MERN stack.",
       image: "/Campus-Connect.png",
@@ -25,7 +40,7 @@ const Projects = () => {
       ]
     },
     {
-      id: 2,
+      id: 3,
       title: "Solar System Explorer",
       description: "A 3D interactive Solar System simulation built with Three.js, showcasing realistic planetary orbits and scaling.",
       image: "/Solar-sytem.png",
@@ -40,7 +55,7 @@ const Projects = () => {
       ]
     },
     {
-      id: 3, 
+      id: 4, 
       title: "Movie Search App",
       description: "The Movie Search App enables users to search for movies, browse by genre, manage a watchlist, and receive personalised recommendations.",
       image: "/movie.png",
@@ -55,7 +70,7 @@ const Projects = () => {
       ]
     },
     {
-      id: 4,
+      id: 5,
       title: "Fitness App",
       description: "Inspired by 'Solo Leveling', this application helps you track your real-life 'leveling up' through daily quests and challenges.",
       image: "/Fitness.png",
@@ -70,7 +85,7 @@ const Projects = () => {
       ]
     },
     {
-      id: 5,
+      id: 6,
       title: "Personal Portfolio",
       description: "The website serves as a digital space to showcase my skills, achievements, and projects",
       image: "/portfolio.png",
@@ -85,7 +100,7 @@ const Projects = () => {
       ]
     },
     {
-      id: 6,
+      id: 7,
       title: "AI-Powered Text-To-Speech",
       description: "A web application that uses AI to read and convert it into natural speech using speech synthesis.",
       image: "/text-to-speech.png",
@@ -100,7 +115,7 @@ const Projects = () => {
       ]
     },
     {
-      id: 7,
+      id: 8,
       title: "Personal Finance Tracker",
       description: "A financial management application that helps users track expenses and visualize spending patterns.",
       image: "./Finance.png",
@@ -115,7 +130,7 @@ const Projects = () => {
       ]
     },
     {
-      id: 8,
+      id: 9,
       title: "Rock Paper Scissors",
       description: "A modern take on the classic game with animated interactions and score tracking.",
       image: "./stone paper scissor game.png",
@@ -128,7 +143,52 @@ const Projects = () => {
         "Score tracking and statistics",
         "Responsive design for all devices"
       ]
-    }
+    },
+    {
+      id: 10,
+      title: "Task Manager",
+      description: "TaskFlow is a robust, full-stack task orchestration platform engineered for high-performance productivity. This repository implements a high-availability architecture using the MERN stack",
+      image: "./Task.png",
+      githubUrl: "https://github.com/AdiVermaa/Global-Trend.git",
+      liveUrl: "https://global-trend-omega.vercel.app/",
+      technologies: ["Node.JS","React","MONGO","Express.js"],
+      year: "2026",
+      results: [
+        "Full-stack task management platform built using the MERN stack for scalable productivity.",
+        "Secure system with JWT authentication, validation, and MongoDB cloud integration.",
+        "Modern UI with React, Tailwind, and efficient API-driven task operations."
+      ]
+    },
+    {
+      id: 11,
+      title: "Mini Social Media",
+      description: "A full-stack social media platform with post sharing and following capabilities.",
+      image: "./Mini_SS.png",
+      githubUrl: "https://github.com/AdiVermaa/SocialMedia.git",
+      liveUrl: "https://social-media-beige-nu.vercel.app/",
+      technologies: ["Node.JS","React","MONGO","Express.js","Multer",],
+      year: "2026",
+      results: [
+        "Full-stack social media platform",
+        "Post sharing and following capabilities",
+        "Responsive design for all devices"
+      ]
+    },
+    {
+      id: 12,
+      title: "Github Analyzer",
+      description: "AI-powered student GitHub repository analysis and feedback system using Langraph and Groq API.",
+      image: "./Mini_SS.png",
+      githubUrl: "https://github.com/AdiVermaa/student-github-reviewer.git",
+      liveUrl: "https://social-media-beige-nu.vercel.app/",
+      technologies: ["Python","Streamlit","Langraph","Groq API","Github API"],
+      year: "2026",
+      results: [
+        "AI-powered student GitHub repository analysis and feedback system using Langraph and Groq API.",
+        "Automated code quality assessment, best practice validation, and detailed improvement suggestions.",
+        "Interactive Streamlit interface for seamless repository submission and result visualization."
+      ]
+    },
   ];
 
   const handleNext = () => {
