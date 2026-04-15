@@ -178,9 +178,9 @@ const Projects = () => {
       id: 12,
       title: "Github Analyzer",
       description: "AI-powered student GitHub repository analysis and feedback system using Langraph and Groq API.",
-      image: "./Mini_SS.png",
+      image: "./Github.png",
       githubUrl: "https://github.com/AdiVermaa/student-github-reviewer.git",
-      liveUrl: "https://social-media-beige-nu.vercel.app/",
+      liveUrl: "https://github-reviewer-ui-56uj.onrender.com/",
       technologies: ["Python","Streamlit","Langraph","Groq API","Github API"],
       year: "2026",
       results: [
