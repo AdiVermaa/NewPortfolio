@@ -1,15 +1,44 @@
-# My Portfolio Wesbite - Overview 🚀
+# Aditya Verma - Personal Portfolio 🚀
 
-If you are copying this code or forking this repo, please give a credit of my name :(
+Modern 3D Personal Portfolio built with React, TypeScript, Three.js, GSAP, and Vite.
 
-## Instructions 🛠️
+## Features ✨
 
-I have modified the gsap club plugins with the trial plugins, but with the trial plugin you cannot host it🔴. So for Club plugins, Check out here: https://gsap.com/docs/v3/Installation/
+- **Interactive 3D Avatar & Environment**: Built using Three.js & `@react-three/fiber`
+- **GSAP & Smooth Scroll**: Interactive animations and Lenis smooth scrolling
+- **12 Real-World Projects**: Showcase with live demo URLs and GitHub source repositories
+- **Experience & Skills**: Interactive tech stack pyramid and work history
+- **Responsive Design**: Designed for high performance across desktop and mobile devices
 
-**Techstack** - React, TypeScript, GSAP, ThreeJS, WebGL, HTML, Css, JavaScript
+## Tech Stack 🛠️
 
-![Protfolio-Preview](https://github.com/user-attachments/assets/3c4557e7-6392-4928-b8a9-7b2476ef4edd)
+- **Frontend**: React 18, TypeScript, Vite, HTML5, CSS3, Tailwind CSS
+- **3D & Motion**: Three.js, React Three Fiber, GSAP, Lenis
+- **Deployment**: Vercel
 
-## License
+## Setup & Local Development 💻
 
-This project is open source and available under the [MIT License](LICENSE).
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/AdiVermaa/NewPortfolio.git
+   cd NewPortfolio
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Build for production:
+   ```bash
+   npm run build
+   ```
+
+## License 📜
+
+This project is licensed under the [MIT License](LICENSE).
