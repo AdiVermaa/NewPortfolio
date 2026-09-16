@@ -1,13 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/logo.png" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AV</title>
+    <title>Aditya Verma - Fullstack Developer | AI Enthusiast</title>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      window.addEventListener('error', function(event) {
+        fetch('http://localhost:9999/', {
+          method: 'POST',
+          body: event.message + ' at ' + event.filename + ':' + event.lineno
+        }).catch(e => console.error(e));
+      });
+      window.addEventListener('unhandledrejection', function(event) {
+        fetch('http://localhost:9999/', {
+          method: 'POST',
+          body: 'Unhandled rejection: ' + (event.reason ? event.reason.toString() : 'Unknown')
+        }).catch(e => console.error(e));
+      });
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
